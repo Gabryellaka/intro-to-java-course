@@ -67,27 +67,7 @@ public class CollectionsAssignment {
 
         }
 
-    /**
-     * This method returns an ArrayList containing all elements that appear in
-     * both of the two collection arguments. There will be no duplicate values
-     * in the resulting ArrayList. The values in the returned ArrayList must be
-     * in sorted order. For example, if the two arguments contain {2, 1, 2, 3} and
-     * {3, 4, 4, 5}, the returned ArrayList will contain {3}. The original
-     * collections will not be modified.
-     *
-     * @param ints1 - the first collection
-     * @param ints2 - the second collection
-     * @return An ArrayList containing the integers that appear in both
-     * collections.
-     */
-    public static ArrayList<Integer> inBoth(Collection<Integer> ints1, Collection<Integer> ints2) {
-
-        TreeSet<Integer> sortedlist2 = new TreeSet <> (ints1);
-        sortedlist2.retainAll(ints2);
-        sortedlist2.addAll(ints2);
-        return new ArrayList<>(sortedlist2);
-        
-    }
+    
 
     /**
      * This method returns the String that appears most frequently in the

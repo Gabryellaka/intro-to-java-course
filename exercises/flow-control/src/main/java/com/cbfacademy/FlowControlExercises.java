@@ -10,26 +10,25 @@ public class FlowControlExercises {
 
     public List<String> fizzBuzz(List<Integer> numbers) {
         List<String> result = new ArrayList<>();
-        for (Integer number:numbers){
-            if (number%3==0 && number%5==0) {
-                result.add("FizzBuzz");}
-                else if (number%3==0) {
-                    result.add("Fizz");}
-                else if (number%5==0) {
-                    result.add("Buzz");}
-                else {
-                        result.add(number.toString());
-                    }
-                }
-                return result;
+        for (Integer number : numbers) {
+            if (number % 3 == 0 && number % 5 == 0) {
+                result.add("FizzBuzz");
+            } else if (number % 3 == 0) {
+                result.add("Fizz");
+            } else if (number % 5 == 0) {
+                result.add("Buzz");
+            } else {
+                result.add(number.toString());
             }
-        
+        }
+        return result;
+    }
 
     public String whichMonth(Integer number) {
-       
+
         switch (number) {
             case 1:
-            return "January";
+                return "January";
             case 2:
                 return "February";
             case 3:
@@ -52,37 +51,35 @@ public class FlowControlExercises {
                 return "November";
             case 12:
                 return "December";
-        
-            default: 
-            return "Invalid month number";
-                
+
+            default:
+                return "Invalid month number";
+
         }
     }
 
     public Map<String, Integer> sumOfOddsAndSumOfEvens() {
-        List<Integer> numbers= new ArrayList<>();
-        for (int i=1; i<=100; i++){
+        List<Integer> numbers = new ArrayList<>();
+        for (int i = 1; i <= 100; i++) {
             numbers.add(i);
         }
-        int sumofevens=0;
-        int sumofodds=0;
+        int sumofevens = 0;
+        int sumofodds = 0;
 
-        for (Integer number:numbers){
-            if (number%2==0) {
+        for (int number : numbers) {
+            if (number % 2 == 0) {
                 sumofevens += number;
-            }
-                else{
-                    sumofodds += number;
+            } else {
+                sumofodds += number;
 
-                }
             }
-            Map<String, Integer> result = new HashMap<>();
-            result.put("Sumofevens", sumofevens);
-            result.put("Sumofodds", sumofodds);
-
-            return result;
         }
-    
+        Map<String, Integer> result = new HashMap<>();
+        result.put("Sumofevens", sumofevens);
+        result.put("Sumofodds", sumofodds);
+
+        return result;
+    }
 
     public List<Integer> reverse(ArrayList<Integer> numbers) {
         Collections.reverse(numbers);
